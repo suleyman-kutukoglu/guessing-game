@@ -1,6 +1,5 @@
 import random
 
-
 def randomWordFromTxt():
     allWords = list()
     with open("word_list.txt", "r", encoding="utf-8") as file:
@@ -10,7 +9,6 @@ def randomWordFromTxt():
     randomWord = allWords[random.randint(0, len(allWords) - 1)]
 
     return randomWord
-
 
 secretWord = randomWordFromTxt()
 secretWordWithStars = "*" * len(secretWord)
