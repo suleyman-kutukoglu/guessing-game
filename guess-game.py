@@ -26,7 +26,7 @@ while secretWord.upper() != currentStatus:
     howManyTry += 1
     anyLetter = input("Please enter one letter or a {}-letter word:".format(len(secretWord)))
 
-    if len(anyLetter) == 1:
+    if len(anyLetter) is 1:
         for e in secretWord:
             if e.upper() == anyLetter.upper():
                 guessLetterList[indexOfArray] = anyLetter.upper()
@@ -37,9 +37,9 @@ while secretWord.upper() != currentStatus:
 
         for e in guessLetterList: currentStatus += e
 
-        if letterCounter == 1:
+        if letterCounter is 1:
             print("Yes! The word contains the letter '{}'\n{}".format(anyLetter, currentStatus))
-        elif letterCounter == 0:
+        elif letterCounter is 0:
             print("The letter {} is not found.\n{}".format(anyLetter, currentStatus))
         else:
             print("Yes the word contains '{}'s.\n{}".format(anyLetter, currentStatus))
@@ -53,3 +53,5 @@ while secretWord.upper() != currentStatus:
 
 print("Yes, the word is {}! You got it {} tries.".format(secretWord, howManyTry))
 input()
+
+
